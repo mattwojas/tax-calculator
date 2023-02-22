@@ -1,0 +1,44 @@
+$large_spacing: 20px;
+$small_spacing: 10px;
+$mobileWidth: 767px;
+$desktopWidth: 768px;
+
+body {
+  padding: $large_spacing;
+}
+
+.v_space,
+li {
+  margin-bottom: $large_spacing;
+}
+li {
+  list-style: disc;
+}
+.left_spacing {
+  margin-left: $small_spacing;
+}
+
+select{
+  padding:2px
+}
+
+form {
+  label{
+    @media only screen and (max-width: $mobileWidth) {
+      margin-bottom: $small_spacing;
+    }
+  }
+  input,
+  button {
+    margin-left:$small_spacing;
+    @media only screen and (max-width: $mobileWidth) {
+      width: 100%;
+      margin-left:0;
+      margin-bottom: $large_spacing;
+    }
+  }
+}
+
+.errorText{
+  color:#ff0000;
+}
