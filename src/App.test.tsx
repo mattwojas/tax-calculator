@@ -97,6 +97,23 @@ test("renders correct effective rate when given an income", async () => {
   await expect(result.textContent).toBe("15.00%");
 });
 
+test("renders error message when no income provided", async () => {
+  await act(() => {
+    render(<App />);
+  });
 
-// only allows numbers
+  const input = screen.getByTestId("income_input");
+  const button = screen.getByTestId("income_button");
+  const incomeAmount = ""
+  const event = {
+    target: { value: incomeAmount },
+  };
+  fireEvent.change(input, event);
+  fireEvent.click(button);
+  const result = screen.getByText(/Please input an income value/i);
+  await expect(result).toBeInTheDocument();
+});
+
+
+
 

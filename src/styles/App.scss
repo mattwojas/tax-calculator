@@ -2,9 +2,10 @@ $large_spacing: 20px;
 $small_spacing: 10px;
 $mobileWidth: 767px;
 $desktopWidth: 768px;
+$errorColor: #ff0000;
 
 body {
-  padding: $large_spacing;
+  padding: $large_spacing 0;
 }
 
 .v_space,
@@ -40,5 +41,5 @@ form {
 }
 
 .errorText{
-  color:#ff0000;
+  color:$errorColor;
 }

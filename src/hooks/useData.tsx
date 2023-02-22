@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { endpoints } from "../constants";
 import { taxData } from "../types";
 
-const useData = (year: string | number) => {
+const useData = (year: string) => {
     const taxRateEndpoint = `${endpoints.TAX_BRACKET}/${year}`;
     const [taxRates, setTaxRates] = useState<taxData>();
     useEffect(() => {
